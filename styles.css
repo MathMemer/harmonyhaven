@@ -1,0 +1,161 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #e0f7fa, #80deea, #4dd0e1, #00acc1);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #0277bd;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 10px;
+  background-color: #0288d1;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #b2ebf2;
+}
+
+/* Section Styles */
+section {
+  padding: 30px;
+  margin: 30px auto;
+  max-width: 900px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #0277bd;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+p, li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #0277bd;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  /* Loading Screen Styles */
+  #loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 188, 212, 0.9); /* Sky-themed background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of everything */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  /* Spinner Animation */
+  .spinner {
+    border: 8px solid #e0f7fa; /* Light color */
+    border-top: 8px solid #0277bd; /* Darker blue for contrast */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1.5s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  /* Loading text style */
+  #loading-screen p {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 20px;
+  }
+
+  /* Show Loading Screen */
+  #loading-screen.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
