@@ -6,6 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harmony Haven</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Inline CSS for demonstration purposes */
+      .poster-container {
+        text-align: center; /* Center the content horizontally */
+        margin: 20px auto; /* Center the container itself horizontally */
+        padding: 20px;
+      }
+
+      .poster-container img {
+        max-width: 100%; /* Ensure the image scales with the container */
+        height: auto; /* Maintain aspect ratio */
+        border: 1px solid #ddd; /* Optional: border around the image */
+        border-radius: 8px; /* Optional: rounded corners */
+      }
+
+      /* Other styling for consistency */
+      .content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+  </style>
 </head>
 
 <body>
@@ -29,8 +51,8 @@
       </ul>
     </nav>
   </header>
-
-  <img src="poster.png" alt="Harmony Haven">
+  <div class="poster-container">
+    <img src="poster.png" alt="Harmony Haven">
 
   <section class="mission">
     <h2>Our Mission</h2>
